@@ -214,8 +214,6 @@
 .queue-input {
   width: 175px;
   height: 30px;
-  border: 1px solid #000000;
-  border-radius: 4px;
   margin-top: 5px;
   padding-left: 10px;
   box-sizing: border-box;
@@ -277,4 +275,93 @@
   top: 195px;
   right: 15px;
   width: 110px;
+}
+
+.problems {
+  width: 375px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 25px;
+}
+
+.problems-title {
+  margin: unset;
+}
+
+.problems-title img {
+  margin-top: 30px;
+  width: 202px;
+}
+
+.problems-text1 {
+  transform: translateX(40px);
+}
+
+.problems-text1 img {
+  width: 142px;
+}
+
+.problems-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 227.5px;
+  grid-gap: 7.5px;
+  height: 147.5px;
+}
+
+.problems-btns img {
+  width: 81.5px;
+}
+
+.problems-btn1 {
+  cursor: pointer;
+  border: 1px solid #000000;
+  background-color: #E4E3F2;
+  border: 2px solid #7176B7;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.problems-btn2 {
+  cursor: pointer;
+  background-color: #ccede5;
+  border: 2px solid #00a47b;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.problems-text2 img {
+  margin-top: 20px;
+  width: 145px;
+}
+
+.problems-pic1 img {
+  position: absolute;
+  top: 107px;
+  left: 83px;
+  width: 69.5px;
+}
+
+.problems-pic2 img {
+  position: absolute;
+  top: 169px;
+  right: 47px;
+  width: 44.5px;
+}
+
+.problems-pic3 img {
+  position: absolute;
+  top: 354px;
+  left: 15px;
+  width: 67px;
+}
+
+.problems-pic4 img {
+  position: absolute;
+  top: 320px;
+  right: 5px;
+  width: 105.75px;
 }

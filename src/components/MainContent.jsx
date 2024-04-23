@@ -6,6 +6,11 @@ import Queue from './Queue'
 
 import bg from '../assets/bg.jpg';
 
+import btn1 from '../assets/problems/problems-btn1.png';
+import btn2 from '../assets/problems/problems-btn2.png';
+import btn3 from '../assets/problems/problems-btn3.png';
+import btn4 from '../assets/problems/problems-btn4.png';
+
 function MainContent() {
   const [system, setSystem] = useState(null);
   const [product, setProduct] = useState(null);
@@ -26,11 +31,11 @@ function MainContent() {
 
   function renderProductButtons() {
     return (
-      <div>
-        <button onClick={() => handleProductClick('抗老撫紋')}>抗老撫紋</button>
-        <button onClick={() => handleProductClick('美白淡斑')}>美白淡斑</button>
-        <button onClick={() => handleProductClick('粉刺毛孔')}>粉刺毛孔</button>
-        <button onClick={() => handleProductClick('保濕補水')}>保濕補水</button>
+      <div className='problems-btns'>
+        <button onClick={() => handleProductClick('抗老撫紋')} className='problems-btn1'><img src={btn1} alt='抗老撫紋' /></button>
+        <button onClick={() => handleProductClick('美白淡斑')} className='problems-btn2'><img src={btn2} alt='美白淡斑' /></button>
+        <button onClick={() => handleProductClick('粉刺毛孔')} className='problems-btn2'><img src={btn3} alt='粉刺毛孔' /></button>
+        <button onClick={() => handleProductClick('保濕補水')} className='problems-btn1'><img src={btn4} alt='保濕補水' /></button>
       </div>
     );
   }
