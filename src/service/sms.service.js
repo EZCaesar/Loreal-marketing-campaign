@@ -1,10 +1,8 @@
-const { encode } = require('urlencode');
-
 
 export default async function sendSms(phone, text) {
   const smsEndpoint = `http://api.twsms.com/json/sms_send.php?username=${process.env.REACT_APP_SMS_USERNAME}&password=${
     process.env.REACT_APP_SMS_PASSWORD
-  }&mobile=${phone}&message=${encode(text)}`;
+  }&mobile=${phone}&message=${encodeURI(text)}`;
   const response = await fetch(smsEndpoint);
   const jsonRet = await response.json();
   const retCode = jsonRet.code;
