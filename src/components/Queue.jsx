@@ -15,6 +15,9 @@ export default function Queue({handleBackToSystemClick}) {
       if (!phone || !displayedName) {
         throw new Error('請填寫完整資料');
       }
+      if (!/^09[0-9]{8}$/.test(phone)) {
+        throw new Error('請填寫正確的手機號碼');
+      }
       await supabase
       .from('user')
       .insert([{ userId: Date.now(), phone, displayedName, status: 'waiting' }]);
