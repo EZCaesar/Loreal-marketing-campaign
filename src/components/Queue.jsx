@@ -5,7 +5,6 @@ import { createClient } from '@supabase/supabase-js'
 export default function Queue({handleBackToSystemClick}) {
   const nameRef = useRef();
   const phoneRef = useRef();
-  console.log(process.env.REACT_APP_SUPABASE_URL);
   const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
 
   // Function to add a user to the queue
@@ -24,7 +23,6 @@ export default function Queue({handleBackToSystemClick}) {
     } catch (error) {
       alert(error.message);
     }
-  
   };
 
   return (
