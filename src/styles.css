@@ -80,6 +80,20 @@
   margin: unset;
 }
 
+.back-btn {
+  width: 100px;
+  height: 25px;
+  background-color: #000000;
+  border: unset;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+}
+
+.back-btn img {
+  width: 70px;
+}
+
 .selection {
   width: 375px;
   position: relative;
@@ -120,8 +134,9 @@
   display: grid;
   place-items: center;
   background-color: #ccede5;
-  border: 3px solid #00a47b;
+  border: 2px solid #00a47b;
   border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .selection-btn1 img {
@@ -138,8 +153,9 @@
   display: grid;
   place-items: center;
   background-color: #E4E3F2;
-  border: 3px solid #7176B7;
+  border: 2px solid #7176B7;
   border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .selection-btn2 img {
@@ -158,4 +174,107 @@
   top: 366px;
   right: 7px;
   width: 85px;
+}
+
+.queue {
+  width: 375px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 25px;
+}
+
+.queue-title {
+  margin: unset;
+}
+
+.queue-title img {
+  margin-top: 35px;
+  width: 270px;
+}
+
+.queue-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 50px; */
+  width: 175px;
+}
+
+.queue-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.queue-input {
+  width: 175px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  margin-top: 5px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  color: #7176B7;
+  background-color: #E4E3F2;
+  border: 2px solid #7176B7;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.queue-input-1 img {
+  width: 128px;
+}
+
+.queue-input-2 img {
+  width: 147px;
+}
+
+.queue-btn {
+  height: 22.5px;
+  width: 90px;
+  border: unset;
+  background-color: #000000;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  margin-top: 20px;
+}
+
+.queue-btn img {
+  width: 50px;
+}
+
+.queue-text3 img {
+  width: 137px;
+  margin-top: 10px;
+}
+
+.queue-back-btn {
+  margin-top: 26px;
+}
+
+.queue-pic1 img {
+  position: absolute;
+  top: 202px;
+  left: 59px;
+  width: 33.5px;
+}
+
+.queue-pic2 img {
+  position: absolute;
+  top: 340px;
+  left: 20px;
+  width: 110px;
+}
+
+.queue-pic3 img {
+  position: absolute;
+  top: 195px;
+  right: 15px;
+  width: 110px;
 }
