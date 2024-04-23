@@ -1,0 +1,161 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App > *:nth-child(2) {
+  flex: 1;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .App {
+    min-height: -webkit-fill-available;
+  }
+}
+
+.header {
+  display: grid;
+  height: 100px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  place-items: center;
+}
+
+.logo {
+  width: 219px;
+}
+
+.frame-h380 {
+  position: absolute;
+  height: 380px;
+  left: 30px;
+  top: 50px;
+  z-index: -1;
+}
+
+.frame-h380 img {
+  height: 100%;
+}
+
+.frame-h380-bg {
+  position: absolute;
+  width: 304px;
+  height: 370px;
+  left: 4px;
+  top: 4px;
+  background-color: #f5f5f5;
+  z-index: -2;
+}
+
+.pic-up-h380 img {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: 95px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75px;
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  grid-area: text;
+  width: 235px;
+  margin-bottom: 8px;
+}
+
+.footer-copyright {
+  grid-area: copyright;
+  font-size: 12px;
+  color: #aaaaaa;
+  margin: unset;
+}
+
+.selection {
+  width: 375px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.selection-title {
+  margin: unset;
+}
+
+.selection-title img {
+  margin-top: 35px;
+  width: 251.5px;
+}
+
+.selection-text img {
+  width: 122.333px;
+  height: 95.667px;
+  margin-right: 70px;
+}
+
+.selection-pic1 img {
+  position: absolute;
+  top: 120px;
+  left: 210px;
+  width: 101px;
+  height: 118px;
+}
+
+.selection-btn1 {
+  cursor: pointer;
+  z-index: 1;
+  width: 230px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  background-color: #ccede5;
+  border: 3px solid #00a47b;
+  border-radius: 4px;
+}
+
+.selection-btn1 img {
+  height: 36px;
+}
+
+.selection-btn2 {
+  margin-top: 16px;
+
+  cursor: pointer;
+  z-index: 1;
+  width: 230px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  background-color: #E4E3F2;
+  border: 3px solid #7176B7;
+  border-radius: 4px;
+}
+
+.selection-btn2 img {
+  height: 36px;
+}
+
+.selection-pic2 img {
+  position: absolute;
+  top: 324px;
+  left: 2px;
+  width: 140px;
+}
+
+.selection-pic3 img {
+  position: absolute;
+  top: 366px;
+  right: 7px;
+  width: 85px;
+}

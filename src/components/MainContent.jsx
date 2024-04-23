@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import SystemSelection from './SystemSelection';
 import SkinProblemSets from './SkinProblemSets';
 import ProductDetails from './ProductDetails';
-import Queue from './Queue';
+import Queue from './Queue'
+
+import bg from '../assets/bg.jpg';
 
 function MainContent() {
   const [system, setSystem] = useState(null);
@@ -130,14 +132,25 @@ function MainContent() {
   }
 
   return (
-<main className="main-content">
-  <h1>Choose a system</h1>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: '500px',
+        height: 'calc(100% - 175px)',
+        position: 'absolute',
+        width: '100%',
+        maxWidth: '500px',
+        zIndex: '-5',
+      }}>
+      </div>
+      <main className="main-content">
   {!system && <SystemSelection handleSystemClick={handleSystemClick}  />}
   {system === 'skinProblemSets' && !product && <SkinProblemSets renderProductButtons={renderProductButtons} handleBackToSystemClick={handleBackToSystemClick} />}
   {product && <ProductDetails product={product} renderProductDetails={renderProductDetails} setProduct={setProduct} />}
   {system === 'queue' && <Queue handleBackToSystemClick={handleBackToSystemClick} />}
-
-</main>  );
+      </main>
+    </div>
+  );
 }
 
 export default MainContent;

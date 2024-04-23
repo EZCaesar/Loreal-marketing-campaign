@@ -1,11 +1,12 @@
 import React from 'react';
 
+import footerText from '../assets/footer/footer-text.png';
+
 function Footer() {
   return (
     <footer className="footer">
-      <p>Finest Apothecary Skincare</p>
-      <p>Nature. Science. Service.</p>
-      <p>&copy; {new Date().getFullYear()} Kiehl's LLC.</p>
+      <img src={footerText} alt='Finest Apothecary Skincare' className='footer-text' />
+      <p className='footer-copyright'>&copy; 2024 Kiehl's LLC.</p>
     </footer>
   );
 }
