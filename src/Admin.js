@@ -1,9 +1,9 @@
 import { useEffect, useState, useCallback } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import sendSMS from './service/sms.service';
+const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
 export default function AdminQueue() {
   const [queue, setQueue] = useState([]);
-  const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
 
   const fetchQueue = useCallback(async () => {
     let { data: user, error } = await supabase
@@ -12,7 +12,7 @@ export default function AdminQueue() {
       .order('userId', { ascending: true });
     if (error) console.log('Error loading queue', error);
     else setQueue(user);
-  }, [supabase]);
+  }, []);
 
   useEffect(() => {
     fetchQueue();
