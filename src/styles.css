@@ -352,6 +352,7 @@
 
 .problems-title {
   margin: unset;
+  z-index: 1;
 }
 
 .problems-title img {
@@ -373,6 +374,7 @@
   width: 227.5px;
   grid-gap: 7.5px;
   height: 147.5px;
+  z-index: 1;
 }
 
 .problems-btns img {
@@ -397,20 +399,20 @@
 }
 
 .problems-text2 img {
-  margin-top: 20px;
-  width: 145px;
+  margin-top: 10px;
+  width: 184px;
 }
 
 .problems-pic1 img {
   position: absolute;
-  top: 107px;
+  top: 110px;
   left: 83px;
   width: 69.5px;
 }
 
 .problems-pic2 img {
   position: absolute;
-  top: 169px;
+  top: 167px;
   right: 47px;
   width: 44.5px;
 }
@@ -424,7 +426,7 @@
 
 .problems-pic4 img {
   position: absolute;
-  top: 320px;
+  top: 340px;
   right: 5px;
   width: 105.75px;
 }

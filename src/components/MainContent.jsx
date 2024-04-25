@@ -327,7 +327,7 @@ function MainContent() {
               <iframe
                 width="164"
                 height="294"
-                src="https://www.youtube.com/embed/lMwbqiyoEzk?feature=shared"
+                src="https://www.youtube.com/embed/hsnwcyhkVPs?feature=shared"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
