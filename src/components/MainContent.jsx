@@ -346,20 +346,20 @@ function MainContent() {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ display: 'grid', justifyItems: 'center', paddingTop: 100 }}>
       {/* Background image */}
       <div style={{
         backgroundImage: `url(${bg})`,
-        backgroundSize: '500px',
-        height: 'calc(100% - 175px)',
-        position: 'absolute',
+        backgroundSize: '932px',
+        backgroundPosition: 'top',
         width: '100%',
-        maxWidth: '500px',
+        maxWidth: '932px',
         zIndex: '-5',
+        gridArea: '1/1/2/2',
       }}>
       </div>
 
-      <main className="main-content">
+      <main className="main-content" style={{ gridArea: '1/1/2/2', width: 375 }}>
         {!system && <SystemSelection handleSystemClick={handleSystemClick}  />}
         {system === 'skinProblemSets' && !product && <SkinProblemSets renderProductButtons={renderProductButtons} handleBackToSystemClick={handleBackToSystemClick} />}
         {product && <ProductDetails product={product} renderProductDetails={renderProductDetails} setProduct={setProduct} />}

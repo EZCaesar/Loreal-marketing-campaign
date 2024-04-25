@@ -15,12 +15,17 @@
 }
 
 .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   display: grid;
   height: 100px;
   background-color: #000000;
   color: #ffffff;
   text-align: center;
   place-items: center;
+  z-index: 6;
 }
 
 .logo {
