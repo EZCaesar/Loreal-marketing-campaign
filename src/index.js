@@ -16,8 +16,8 @@ root.render(
         <Route path="/admin" element={<Admin />} />
         <Route path="/clients" element={<Clients />} />
       </Routes>
+      <Analytics />
+      <SpeedInsights />
     </Router>
-    <Analytics />
-    <SpeedInsights />
   </React.StrictMode>
 );
