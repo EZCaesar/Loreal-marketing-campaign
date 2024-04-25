@@ -14,7 +14,7 @@ import pic4 from '../assets/problems/problems-pic4.png';
 export default function SkinProblemSets({ renderProductButtons, handleBackToSystemClick }) {
   return (
     <div className='problems'>
-            <div className='frame-h380'>
+      <div className='frame-h380'>
         <img src={frame} alt='' />
         <div className='frame-h380-bg'></div>
       </div>
@@ -24,7 +24,7 @@ export default function SkinProblemSets({ renderProductButtons, handleBackToSyst
       </div>
 
       <h2 className='problems-title'>
-        <img src={title} alt="歡迎光臨Kiehl's" />
+        <img src={title} alt="歡迎光臨Kiehl’s" />
       </h2>
 
       <div className='problems-text1'>
