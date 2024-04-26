@@ -22,7 +22,8 @@ export default function Queue({handleBackToSystemClick}) {
   const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
 
   // Function to add a user to the queue
-  const joinQueue = async () => {
+  const joinQueue = async (e) => {
+    e.preventDefault();
     const phone = phoneRef.current.value;
     const displayedName = nameRef.current.value;
     try{
