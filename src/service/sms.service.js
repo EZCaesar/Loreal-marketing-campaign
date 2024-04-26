@@ -5,9 +5,6 @@ export default async function sendSms(phone, text) {
   }&mobile=${phone}&message=${encodeURI(text)}`;
   const response = await fetch(smsEndpoint);
   const jsonRet = await response.json();
-  console.log(' ------------------------------------------------------');
-  console.log('file: sms.service.js:8 | sendSms | jsonRet:\n', jsonRet);
-  console.log(' ------------------------------------------------------');
   const retCode = jsonRet.code;
   if (retCode === '00000') {
     console.log('Sms sent successfully');

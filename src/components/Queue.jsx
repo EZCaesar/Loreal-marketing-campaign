@@ -16,7 +16,6 @@ import btn from '../assets/queue/queue-btn.png';
 
 export default function Queue({handleBackToSystemClick}) {
   const { branch } = useParams();
-  console.log(branch );
   const nameRef = useRef();
   const phoneRef = useRef();
   const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
@@ -35,7 +34,7 @@ export default function Queue({handleBackToSystemClick}) {
       }
       await supabase
       .from('user')
-      .insert([{ userId: Date.now(), phone, displayedName, status: 'waiting', branch }]);
+      .insert([{ userId: Date.now(), phone, displayedName, status: '等待中', branch }]);
  
       alert('已成功加入排隊');
     } catch (error) {
