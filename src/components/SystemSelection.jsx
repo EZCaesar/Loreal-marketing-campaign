@@ -7,7 +7,7 @@ import pic1 from '../assets/selection/selection-pic1.png';
 import pic2 from '../assets/selection/selection-pic2.png';
 import pic3 from '../assets/selection/selection-pic3.png';
 import btn1 from '../assets/selection/selection-btn1.png';
-// import btn2 from '../assets/selection/selection-btn2.png';
+import btn2 from '../assets/selection/selection-btn2.png';
 
 export default function SystemSelection({ handleSystemClick }) {
   return (
@@ -37,9 +37,9 @@ export default function SystemSelection({ handleSystemClick }) {
         <img src={btn1} alt='點選此按鈕 了解肌膚問題並領取禮物' />
       </button>
       
-      {/* <button onClick={() => handleSystemClick('queue')} className='selection-btn2'>
+      <button onClick={() => handleSystemClick('queue')} className='selection-btn2'>
         <img src={btn2} alt='點選此按鈕 領取排隊號碼牌' />
-      </button> */}
+      </button>
 
       <div className='selection-pic2'>
         <img src={pic2} alt='' />
