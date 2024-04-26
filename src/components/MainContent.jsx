@@ -47,7 +47,7 @@ import productDImage1 from '../assets/product/金盞花植物精華化妝水250M
 import productDImage2 from '../assets/product/冰河醣蛋白保濕霜50ML.png';
 import productDQ from '../assets/product/product-game-d-q.png';
 
-function MainContent() {
+function MainContent({branch}) {
   const [system, setSystem] = useState(null);
   const [product, setProduct] = useState(null);
 
@@ -363,7 +363,7 @@ function MainContent() {
         {!system && <SystemSelection handleSystemClick={handleSystemClick}  />}
         {system === 'skinProblemSets' && !product && <SkinProblemSets renderProductButtons={renderProductButtons} handleBackToSystemClick={handleBackToSystemClick} />}
         {product && <ProductDetails product={product} renderProductDetails={renderProductDetails} setProduct={setProduct} />}
-        {system === 'queue' && <Queue handleBackToSystemClick={handleBackToSystemClick} />}
+        {system === 'queue' && <Queue handleBackToSystemClick={handleBackToSystemClick} branch={branch} />}
       </main>
     </div>
   );

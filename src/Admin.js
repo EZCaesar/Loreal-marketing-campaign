@@ -1,18 +1,21 @@
 import { useEffect, useState, useCallback } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import sendSMS from './service/sms.service';
+import { useParams } from 'react-router-dom';
 const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
 export default function AdminQueue() {
+  const { branch } = useParams();
   const [queue, setQueue] = useState([]);
 
   const fetchQueue = useCallback(async () => {
     let { data: user, error } = await supabase
       .from('user')
       .select('*')
+      .filter('branch', 'eq', branch) // 只選擇 branch 欄位匹配的用戶
       .order('userId', { ascending: true });
     if (error) console.log('Error loading queue', error);
     else setQueue(user);
-  }, []);
+  }, [branch]);
 
   useEffect(() => {
     fetchQueue();
